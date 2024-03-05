@@ -106,6 +106,7 @@
                     <th>Category</th>
                     <th>Quantity</th>
                     <th>Price</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -134,6 +135,7 @@
                     <th>Customer</th>
                     <th>Quantity</th>
                     <th>Payment Method</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -143,6 +145,28 @@
     </div>
 
     <script>
+
+        function createDeleteButton(index, tableId) {
+            var button = document.createElement("button");
+            button.innerHTML = "Delete";
+            button.onclick = function() {
+                deleteItem(index, tableId);
+            };
+
+            var cell = document.createElement("td");
+            cell.appendChild(button);
+
+            return cell;
+        }
+
+        // JavaScript function to delete an item from the inventory or sales table
+        function deleteItem(index, tableId) {
+            var table = document.getElementById(tableId);
+            table.deleteRow(index);
+
+            // Add logic to remove the corresponding item from the inventory system
+            // You'll need to use AJAX or other methods to communicate with your backend (Python) code
+        }
         document.getElementById("addInventoryProductForm").addEventListener("submit", function(event) {
             event.preventDefault();
             let productName = document.getElementById("productName").value;
@@ -156,9 +180,16 @@
                 <td>${productCategory}</td>
                 <td>${productQuantity}</td>
                 <td>$${productPrice}</td>
+                <td><button onclick="removeInventoryProduct(this)">Remove</button></td>
             `;
             document.getElementById("inventoryTable").getElementsByTagName('tbody')[0].appendChild(newRow);
         });
+
+        function removeInventoryProduct(button) {
+            // Traverse up the DOM tree to find the row and then remove it
+            let row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
 
         document.getElementById("addSalesTransactionForm").addEventListener("submit", function(event) {
             event.preventDefault();
@@ -173,9 +204,19 @@
                 <td>${customerName}</td>
                 <td>${saleQuantity}</td>
                 <td>${paymentMethod}</td>
+                <td><button onclick="removeSalesTransaction(this)">Remove</button></td>
             `;
             document.getElementById("salesTable").getElementsByTagName('tbody')[0].appendChild(newRow);
         });
+
+        function removeSalesTransaction(button) {
+            // Traverse up the DOM tree to find the row and then remove it
+            let row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+
+
     </script>
 </body>
 </html>
