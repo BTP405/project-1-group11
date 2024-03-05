@@ -1,19 +1,3 @@
-# inventory_management.py
-
-class InventoryProduct:
-    def __init__(self, name, category, quantity, price):
-        self.name = name
-        self.category = category
-        self.quantity = quantity
-        self.price = price
-
-class SalesTransaction:
-    def __init__(self, product, customer_name, quantity, payment_method):
-        self.product = product
-        self.customer_name = customer_name
-        self.quantity = quantity
-        self.payment_method = payment_method
-
 class Inventory:
     def __init__(self):
         self.inventory_products = []
@@ -22,12 +6,26 @@ class Inventory:
     def add_inventory_product(self, product):
         self.inventory_products.append(product)
 
+    def delete_inventory_product(self, product_name):
+        for product in self.inventory_products:
+            if product.name == product_name:
+                self.inventory_products.remove(product)
+                return True
+        return False
+
     def add_sales_transaction(self, transaction):
         self.sales_transactions.append(transaction)
         # Reduce the quantity of the sold product in inventory
         for product in self.inventory_products:
             if product.name == transaction.product.name:
                 product.quantity -= transaction.quantity
+
+    def delete_sales_transaction(self, product_name):
+        for transaction in self.sales_transactions:
+            if transaction.product.name == product_name:
+                self.sales_transactions.remove(transaction)
+                return True
+        return False
 
     def generate_inventory_report(self):
         report = ""
