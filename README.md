@@ -8,7 +8,9 @@
                    Including applications for augmented reality, object tracking, and spatial analysis.
 ## 2. Installation
     - Dependencies:OpenCV, NumPy, Pickle
-    - Installation Instructions: Provide step-by-step instructions on how to install and set up your project.
+    - Installation Instructions: Install the required dependencies using pip:
+                                 pip install opencv-python numpy
+                                 A connection to the webcam is required for the full implementation
 ## 3. Usage
     - Examples: Run get_map.py to mark four corner points on a map displayed through a webcam feed.
                 Run get_countries.py to mark and save regions of interest (ROIs) on the map using mouse clicks.
