@@ -1,34 +1,31 @@
-
-### Please use the following template to add a ReadMe for your repo.
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/545oUMxH)
 
 ## 1. Project Title and Description
-    - Title: Provide a clear and concise title for your project.
-    - Description: Give a brief overview of what your project does and its purpose.
+    - Title: Map-Based Interactive Region Selection
+    - Description: The map-based interactive region selection project allows users to interactively 
+                   mark and save regions of interest (ROIs) on a map displayed via a webcam feed. The goal of this project 
+                   is to make chores like locating and marking particular locations on a map for different purposes easier. 
+                   Including applications for augmented reality, object tracking, and spatial analysis.
 ## 2. Installation
-    - Dependencies: List any dependencies or prerequisites required to use your project.
-    - Installation Instructions: Provide step-by-step instructions on how to install and set up your project.
+    - Dependencies:OpenCV, NumPy, Pickle
+    - Installation Instructions: Install the required dependencies using pip:
+                                 pip install opencv-python numpy
+                                 A connection to the webcam is required for the full implementation
 ## 3. Usage
-    - Examples: Include examples or code snippets to demonstrate how to use your project.
-    - Configuration: Explain any configuration options or settings users might need to know about.
+    - Examples: Run get_map.py to mark four corner points on a map displayed through a webcam feed.
+                Run get_countries.py to mark and save regions of interest (ROIs) on the map using mouse clicks.
+    - Configuration: Modify the camera ID, resolution, and file paths in the scripts according to your setup and requirements.
 ## 4. Features
-    - List of Features: Outline the main features and functionalities of your project.
+    - List of Features: Mark and save corner points for perspective transformation.
+                        Mark and save polygons representing regions of interest on a map.
+                        Visualize marked regions on the map in real-time.
 ## 5. Contributing
-    - Guidelines: Explain how others can contribute to your project, including information on submitting bug reports, feature requests, or code contributions.
-    - Code Style: If applicable, provide guidelines or references to your code style.
+    - Guidelines: Fork the repository, make your changes, and submit a pull request for review.
+    - Code Style: N/A
 ## 6. Credits
-    - Authors: List the authors or contributors of the project.
-    - Acknowledgments: Mention any individuals or resources that helped inspire or support your project.
+    - Authors: Tony Kim, Yash, Yash Atulbhai Akbari, Bajpayee Aum Shekhar
+    - Acknowledgments: N/A
 ## 7. License
-    - License Information: Specify the license under which your project is distributed.
+    - License Information: N/A
 ## 8. Additional Sections (Optional)
-    - FAQ: Include frequently asked questions and their answers.
-    - Troubleshooting: Provide solutions to common issues or troubleshooting tips.
-    - Roadmap: Outline the future development plans for your project.
-    - Changelog: Document changes and updates to your project over time.
-
-## Markdown Formatting Tips
-  - Use headings (#, ##, ###, etc.) to structure your document.
-  - Utilize lists (- or 1.) for easy-to-read information.
-  - Include links to relevant resources or documentation.
-  - Add code blocks using triple backticks (```) for code snippets.
-  - Use images or diagrams to enhance understanding where applicable.
+    - N/A
