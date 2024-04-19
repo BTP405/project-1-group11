@@ -24,7 +24,7 @@
     - Authors: Tony Kim, Yash, Yash Atulbhai Akbari, Bajpayee Aum Shekhar
     - Acknowledgments: N/A
 
-## 7. Packagin and Docker
+## 7. Packaging and Docker
     -step 1 : Clone the repository
     -step 2 : Navigate to project directory
     -step 3 : run command #docker run -it docim (container name - docim)
