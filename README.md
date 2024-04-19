@@ -1,5 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/545oUMxH)
-
 ## 1. Project Title and Description
     - Title: Map-Based Interactive Region Selection
     - Description: The map-based interactive region selection project allows users to interactively 
@@ -25,7 +23,32 @@
 ## 6. Credits
     - Authors: Tony Kim, Yash, Yash Atulbhai Akbari, Bajpayee Aum Shekhar
     - Acknowledgments: N/A
-## 7. License
+
+## 7. Packagin and Docker
+    -step 1 : Clone the repository
+    -step 2 : Navigate to project directory
+    -step 3 : run command #docker run -it docim (container name - docim)
+    
+## 8. Unit Testing
+Step 1 Unit Test:
+    -test_click_points: This test checks the functionality of clicking points on the map. 
+     It simulates mouse clicks on a mock image and asserts that the correct number of points are selected and saved.
+    -test_warp_image: This test verifies the functionality of warping an image based on provided points. 
+     It creates mock points and an image, then asserts that the image is warped correctly.
+
+Step 2 Unit Test:
+        -test_mark_polygons: This test evaluates the functionality of marking polygons for countries. 
+         It creates a mock image and simulates mouse clicks for each country, then asserts that the polygons are marked correctly.
+        -test_save_load_polygons: This test checks the saving and loading functionality of polygons. 
+         It saves mock polygons to a file, then loads them back and asserts that the loaded polygons match the original ones.
+
+Step 3 Unit Test:
+        -test_get_finger_location: This test verifies the functionality of getting the location of the index finger tip in the warped image. 
+         It creates a mock image and warped image, then calls the function and asserts the result.
+        -test_create_overlay_image: This test evaluates the functionality of creating an overlay image with marked polygons based on the warped finger location. 
+         It creates mock polygons and a finger location, then calls the function and asserts the result.
+
+These unit tests cover various functionalities of each step in the project, ensuring that they behave as expected and providing confidence in the correctness of the code.
+## 9. License
     - License Information: N/A
-## 8. Additional Sections (Optional)
-    - N/A
+## 10. Additional
